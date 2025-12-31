@@ -1,0 +1,51 @@
+body {
+    background-color: #161923;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.digit {
+    display: grid;
+    /* 4 columns by 6 rows */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 0.125rem;
+}
+
+.clock {
+    height: 3rem;
+    width: 3rem;
+    position: relative;
+    background-color: oklch(20% 0 0);
+    border: 0.25rem solid oklch(30% 0 0);
+}
+
+.hand {
+    height: 0.1875rem;
+    background-color: rgb(170, 255, 0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    /* Alignment fix */
+    translate: 0% -50%;
+    transform-origin: center left;
+    transition: rotate 500ms ease-in-out;
+}
+
+/* Default state for the hands */
+.hand:nth-child(1) {
+    rotate: 180deg;
+}
+
+.hand:nth-child(2) {
+    rotate: 90deg;
+}
+
+#tray {
+    display: flex;
+    gap: 1rem; /* Space between each 4x6 digit */
+}

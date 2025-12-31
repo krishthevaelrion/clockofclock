@@ -1,5 +1,5 @@
 body {
-    background-color: #161923;
+    background-color: #0a0b1e;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,11 +21,18 @@ body {
     position: relative;
     background-color: oklch(20% 0 0);
     border: 0.25rem solid oklch(30% 0 0);
+    border-radius: 50%;
 }
 
 .hand {
     height: 0.1875rem;
-    background-color: rgb(170, 255, 0);
+
+    background: linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, magenta, pink);
+    background-size: 10000% 100%;
+
+    animation: rgb-wave 3s linear infinite;
+    filter: brightness(1.2);
+    
     position: absolute;
     top: 50%;
     left: 50%;
@@ -34,6 +41,15 @@ body {
     translate: 0% -50%;
     transform-origin: center left;
     transition: rotate 500ms ease-in-out;
+}
+
+@keyframes rgb-wave {
+    0% {
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: 100% 100%;
+    }
 }
 
 /* Default state for the hands */
@@ -48,4 +64,18 @@ body {
 #tray {
     display: flex;
     gap: 1rem; /* Space between each 4x6 digit */
+}
+
+.boxy {
+    width: 1rem;
+    height: 1rem;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 100%;
+}
+
+.sepa {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }

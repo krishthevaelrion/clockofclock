@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Time</title>
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>The time is ...</h1>
-</body>
+
+    <div id="tray">
+    <div class="digit" id="digit-0"></div>
+    <div class="digit" id="digit-1"></div>
+    <div class="sepa">
+        <div class="boxy"></div>
+        <div class="boxy"></div>
+    </div>
+    <div class="digit" id="digit-2"></div>
+    <div class="digit" id="digit-3"></div>
+    <div class="sepa">
+        <div class="boxy"></div>
+        <div class="boxy"></div>
+    </div>
+    <div class="digit" id="digit-4"></div>
+    <div class="digit" id="digit-5"></div>
+</div>
+
+<template id="clock-template">
+    <div class="clock">
+        <div class="hand"></div>
+        <div class="hand"></div>
+    </div>
+</template>
+<script src="script.js"></script>
 </html>
